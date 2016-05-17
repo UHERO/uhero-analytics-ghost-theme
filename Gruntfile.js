@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             main: {
-                src: 'assets/js/<%= pkg.name %>.js',
+                src: 'assets/js/creative.js',
                 dest: 'assets/js/<%= pkg.name %>.min.js'
             }
         },
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                     paths: ["css"]
                 },
                 files: {
-                    "assets/css/<%= pkg.name %>.css": "assets/less/<%= pkg.name %>.less"
+                    "assets/css/<%= pkg.name %>.css": "assets/less/*less"
                 }
             },
             minified: {
@@ -24,14 +24,14 @@ module.exports = function(grunt) {
                     cleancss: true
                 },
                 files: {
-                    "assets/css/<%= pkg.name %>.min.css": "assets/less/<%= pkg.name %>.less"
+                    "assets/css/<%= pkg.name %>.min.css": "assets/less/*less"
                 }
             }
         },
         banner: '/*!\n' +
             ' * <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2013-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
+            //' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
             ' */\n',
         usebanner: {
             dist: {
@@ -40,13 +40,13 @@ module.exports = function(grunt) {
                     banner: '<%= banner %>'
                 },
                 files: {
-                    src: ['css/<%= pkg.name %>.css', 'css/<%= pkg.name %>.min.css', 'js/<%= pkg.name %>.min.js']
+                    src: ['css/*css', 'css/*min.css', 'js/*min.js']
                 }
             }
         },
         watch: {
             scripts: {
-                files: ['assets/js/<%= pkg.name %>.js'],
+                files: ['assets/js/*js'],
                 tasks: ['uglify'],
                 options: {
                     spawn: false,
