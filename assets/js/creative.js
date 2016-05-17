@@ -4,6 +4,18 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+// jQuery to collapse the navbar on scroll from Grayscale
+function collapseNavbar() {
+    if ($(".navbar").offset().top > 50) {
+        $(".navbar-fixed-top").addClass("top-nav-collapse");
+    } else {
+        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    }
+}
+
+$(window).scroll(collapseNavbar);
+$(document).ready(collapseNavbar);
+
 (function($) {
     "use strict"; // Start of use strict
 
@@ -20,7 +32,7 @@
     $('body').scrollspy({
         target: '.navbar-fixed-top',
         offset: 51
-    })
+    });
 
     // Closes the Responsive Menu on Menu Item Click
     $('.navbar-collapse ul li a:not(.dropdown-toggle)').click(function() {
