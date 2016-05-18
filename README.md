@@ -1,4 +1,4 @@
-# UHERO Analytics Ghos Theme
+# UHERO Analytics Ghost Theme
 
 A Theme for the [Ghost blogging platform](https://ghost.org/) based heavily on the [Creative](http://startbootstrap.com/template-overviews/creative/) theme from [Start Bootstrap](http://startbootstrap.com/)
 
