@@ -1,0 +1,44 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+
+
+<main class="content" role="main">
+    <article class="{{post_class}}">
+        <section class="bg-primary col-lg-8 col-lg-offset-2 text-center">
+            <h1 class="section-heading">{{title}}</h1>
+        </section>
+    </article>
+
+    {{#get "posts" limit="5" include="tags,author"}}
+    {{#foreach posts}}
+    <div class="container">
+      <div class="row">
+         <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+               <article class="{{post_class}}">
+                     <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                        <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+            </div>
+         </div>
+      </div>
+        <footer class="post-meta text-center">
+            {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
+            {{author}}
+            {{tags prefix=" on "}}
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+        </footer>
+    </div>
+    </article>
+    {{/foreach}}
+
+    {{! Previous/next page links - displayed on every page }}
+    {{pagination}}
+    </div>
+    {{/get}}
+</main>
+{{/post}}

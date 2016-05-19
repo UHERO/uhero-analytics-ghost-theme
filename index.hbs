@@ -1,0 +1,173 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+<header class="header-content {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+   <div class="header-content">
+      <div class="header-content-inner">
+         <h1 class="page-title">{{@blog.title}}</h1>
+         <h2 class="page-description">{{@blog.description}}</h2>
+      </div>
+   </div>
+</header>
+
+<section class="no-padding" id="portfolio">
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="col-lg-4 col-sm-6">
+                <a href="#" class="portfolio-box">
+                    <img src="assets/img/portfolio/1.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                           <div class="project-category text-faded">
+                                Category
+                           </div>
+                           <div class="project-name">
+                                Project Name
+                           </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#" class="portfolio-box">
+                    <img src="assets/img/portfolio/2.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                           <div class="project-category text-faded">
+                                Category
+                           </div>
+                           <div class="project-name">
+                                Project Name
+                           </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#" class="portfolio-box">
+                    <img src="assets/img/portfolio/3.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                           <div class="project-category text-faded">
+                                Category
+                           </div>
+                           <div class="project-name">
+                                Project Name
+                           </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#" class="portfolio-box">
+                    <img src="assets/img/portfolio/3.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                           <div class="project-category text-faded">
+                                Category
+                           </div>
+                           <div class="project-name">
+                                Project Name
+                           </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#" class="portfolio-box">
+                    <img src="assets/img/portfolio/3.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                           <div class="project-category text-faded">
+                                Category
+                           </div>
+                           <div class="project-name">
+                                Project Name
+                           </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a href="#" class="portfolio-box">
+                    <img src="assets/img/portfolio/3.jpg" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                           <div class="project-category text-faded">
+                                Category
+                           </div>
+                           <div class="project-name">
+                                Project Name
+                           </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section from Agency -->
+<section id="team" class="bg-light-gray">
+  <div class="container">
+      <div class="row">
+           <div class="col-lg-12 text-center">
+               <h2 class="section-heading">Our Amazing Team</h2>
+               <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+           </div>
+      </div>
+      <div class="row">
+           <div class="col-sm-4">
+               <div class="team-member">
+                   <img src="assets/img/about/1.jpg" class="img-responsive img-circle" alt="">
+                   <h4>Team-Memeber</h4>
+                   <p class="text-muted">Lead Designer</p>
+                   <ul class="list-inline social-buttons">
+                       <li><a href="#"><i class="fa fa-twitter"></i></a>
+                       </li>
+                       <li><a href="#"><i class="fa fa-facebook"></i></a>
+                       </li>
+                       <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+           <div class="col-sm-4">
+               <div class="team-member">
+                   <img src="assets/img/about/2.jpg" class="img-responsive img-circle" alt="">
+                   <h4>Team-Memer</h4>
+                   <p class="text-muted">Lead Marketer</p>
+                   <ul class="list-inline social-buttons">
+                       <li><a href="#"><i class="fa fa-twitter"></i></a>
+                       </li>
+                       <li><a href="#"><i class="fa fa-facebook"></i></a>
+                       </li>
+                       <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+           <div class="col-sm-4">
+               <div class="team-member">
+                   <img src="assets/img/about/3.jpg" class="img-responsive img-circle" alt="">
+                   <h4>Team-Member</h4>
+                   <p class="text-muted">Lead Developer</p>
+                   <ul class="list-inline social-buttons">
+                       <li><a href="#"><i class="fa fa-twitter"></i></a>
+                       </li>
+                       <li><a href="#"><i class="fa fa-facebook"></i></a>
+                       </li>
+                       <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+      </div>
+      <div class="row">
+           <div class="col-lg-8 col-lg-offset-2 text-center">
+               <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+           </div>
+      </div>
+  </div>
+</section>

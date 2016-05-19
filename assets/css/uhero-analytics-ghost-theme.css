@@ -527,6 +527,14 @@ header .header-content .header-content-inner p {
   padding-right: 0;
   padding-left: 0;
 }
+footer .left {
+  padding: 20px 10px;
+  float: left;
+}
+footer .right {
+  padding: 20px 10px;
+  float: right;
+}
 .btn {
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
